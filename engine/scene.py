@@ -2,9 +2,9 @@ class Scene:
     def __init__(self):
         self.actors = []
 
-    def load(self, window):
+    def load(self):
         for a in self.actors:
-            a.load(window)
+            a.load()
 
     def update(self):
         for a in self.actors:

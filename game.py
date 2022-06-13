@@ -2,6 +2,7 @@ import sys, pygame, pygame.locals
 from engine.actor import Actor
 from engine.scene import Scene
 from engine.staticspritecomponent import StaticSpriteComponent
+from engine.movementcomponent import MovementComponent
 
 #Initialize the display module
 pygame.init()
@@ -14,10 +15,12 @@ pygame.display.set_caption("Smiley game");
 scene = Scene()
 actor = Actor()
 
-smiley = StaticSpriteComponent("smile.png")
+
+smiley = StaticSpriteComponent(window, "smile.png")
+smiley.addMovement(0.10)
 actor.components.append(smiley)
 scene.actors.append(actor)
-scene.load(window)
+scene.load()
 
 
 quit = False

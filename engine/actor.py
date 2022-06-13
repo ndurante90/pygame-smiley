@@ -2,9 +2,9 @@ class Actor:
     def __init__(self):
         self.components = []
 
-    def load(self, window):
+    def load(self):
         for a in self.components:
-            a.load(window)
+            a.load()
     
     def update(self):
         for a in self.components:
